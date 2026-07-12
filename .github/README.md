@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F0C29,50:302B63,100:24243E&height=200&section=header&text=dazki&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=A%20binder%20bridge%20between%20AI%20assistants%20and%20rooted%20Android&descAlignY=58&descSize=16" width="100%"/>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&pause=1000&color=8A2BE2&center=true&vCenter=true&width=600&lines=Privileged+service+for+rooted+Android;Typed+binder+calls%2C+not+shelled-out+commands;ADB+or+root+startup%2C+no+system+app+required;Modeled+on+Shizuku." alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&pause=1000&color=8A2BE2&center=true&vCenter=true&width=600&lines=Privileged+service+for+rooted+Android;Typed+binder+calls%2C+not+shelled-out+commands;ADB+or+root+startup%2C+no+system+app+required;Built+from+scratch%2C+no+fork." alt="Typing SVG" />
 
 <br/>
 
@@ -25,7 +25,7 @@
 
 Android apps that need a system-level API normally have two bad options: request a permission the user has to grant by hand, or shell out to a root command and parse whatever text comes back. Both are slow, both are fragile, both fall apart the moment an OEM changes something.
 
-dazki is a third option. Start it once through ADB or root, and it runs as a privileged service that exposes system APIs over a typed AIDL binder. Your app talks to it like any other bound service — real method calls, real types, no `Runtime.exec()`, no scraping stdout. If you've used Shizuku, the shape will feel familiar. dazki isn't a fork of it, but it's built on the same idea: get root-level access without making your app a system app.
+dazki is a third option. Start it once through ADB or root, and it runs as a privileged service that exposes system APIs over a typed AIDL binder. Your app talks to it like any other bound service — real method calls, real types, no `Runtime.exec()`, no scraping stdout. It's an original implementation, built from the ground up for this project rather than adapted from an existing tool.
 
 ## Layout
 
