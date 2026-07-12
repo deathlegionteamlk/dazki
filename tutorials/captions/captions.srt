@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:12,000
+dazki. A bridge between AI assistants and rooted Android devices. Built by death legion team.
+
+2
+00:00:12,000 --> 00:00:35,000
+Apps that need to call system APIs usually fork a shell process and run pm, am, or settings commands. That is slow, it leaks shell output through logcat, and it gives the app a wider attack surface than it needs.
+
+3
+00:00:35,000 --> 00:01:00,000
+dazki runs a small Java process as shell uid, started from ADB or root. The process registers a binder in ServiceManager. Approved apps connect to the binder and call typed methods. No shell, no fork, no parsing of stdout.
+
+4
+00:01:00,000 --> 00:01:35,000
+Three layers. The api module is what client apps depend on. The manager app shows status, the allow list, and start instructions. The server runs as app_process and forwards binder calls to PackageManager, ActivityManager, Settings, and friends.
+
+5
+00:01:35,000 --> 00:02:05,000
+Install the debug APK with adb install. Open the manager. Press Start. A bottom sheet shows two commands. Push the starter script with adb push, then run it with adb shell. The server boots in under a second and registers its binder.
+
+6
+00:02:05,000 --> 00:02:35,000
+The sample app calls Dazki dot init, then Dazki dot is service running, then Dazki dot request permission. The manager app opens a permission dialog. Press Approve. The sample is now allowed. Press Call list packages and watch it return the full installed package list, including ones hidden from regular apps.
+
+7
+00:02:35,000 --> 00:03:05,000
+Install the dazki Claude skill. Run dazki pair. A six digit code appears. Type it into the manager app under Pair new session. Now the AI can call packages list, force stop, settings get, logcat, and shell exec, all through the typed RPC layer.
+
+8
+00:03:05,000 --> 00:03:45,000
+Every call lands in the audit log at data local tmp dazki audit dot jsonl. The user can scope each token. The kill switch revokes every token at once. The server binds its RPC socket to localhost only, so the AI host has to use adb forward to reach it.
+
+9
+00:03:45,000 --> 00:04:10,000
+Play Protect may flag the debug APK because it is signed with a debug key and requests QUERY_ALL_PACKAGES. To dismiss the warning, open Play Protect, tap the warning, and tap Install anyway. For production builds, sign with a real key and tighten the manifest.
+
+10
+00:04:10,000 --> 00:04:30,000
+dazki. Source code, skill, and tutorial in the project folder. Built by death legion team.
