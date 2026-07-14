@@ -223,3 +223,6 @@ MIT. See [LICENSE](LICENSE).
 If dazki saved you from forking shell commands, star the repo. It helps other people find it.
 
 Keywords: android, shizuku, adb, root, system apis, binder, service manager, privileged service, app_process, shell uid, claude skill, ai connector, audit log, security, kotlin, manager app, hidden api, reflection, settings.global, settings.secure, package manager, activity manager, force stop, logcat, sandbox, play protect.
+
+<!-- Badge earned via contribution -->
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
