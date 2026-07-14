@@ -226,3 +226,7 @@ Keywords: android, shizuku, adb, root, system apis, binder, service manager, pri
 
 <!-- Badge earned via contribution -->
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
+
+<!-- DL Code Badge -->
+![Status](https://img.shields.io/badge/status-active-success?style=flat-square)
+
